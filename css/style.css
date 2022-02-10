@@ -15,7 +15,9 @@
 }
 body {
     overflow: hidden;
-    background-color: #e8e4d63d;
+    background: url('/assets/BG.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 .hero-container {
     transform: translateY(25%);
@@ -24,24 +26,18 @@ body {
     text-align: center;
     margin-right: 0;
 }
-.hero img{
-    width: 50vh;
-    position: relative;
-}
 h1{
     font-family: var(--titles);
-    color: var(--black-coffee);
+    color: #eeece5;
     font-size: 10em;
-    transform: rotate(-6deg);
+    transform: rotate(-15deg);
     position: relative;
-}
-h1 span{
-    color:var(--forest-green);
+    margin-top: 14vh;
 }
 .container {
     text-align: center;
     min-height: 100vh;
-    background-color: var(--black-coffee);
+    background-color: #f7f3e8;
     width: 35%;
     padding: 20px;
     display: block;
@@ -52,7 +48,7 @@ h2{
     margin-top: 10vh;
     margin-bottom: 40px;
     font-family: var(--labels);
-    color: #e8e4d6ec;
+    color: var(--black-coffee);
     font-size: 2.2em;
 }
 .div-inputs {
@@ -73,7 +69,8 @@ input[type='number'] {
     margin-top: 8px;
     border-radius: 6px;
     padding: 8px;
-    background-color: #e9e6dd;
+    background-color: #fcfbf9;
+    border: none;
     color: var(--forest-green);
     font-size: 1.5em;
     font-weight: 600;
@@ -82,26 +79,40 @@ input[type='number'] {
 input[type='number']::placeholder{
     font-family: var(--small-info);
     font-size: 16px;
-    color:rgba(209, 148, 105, 0.411);
+    color:#d1946969;
     font-family: var(--small-info);
 }
-input[type='radio'] {
-    font: inherit;
-    width: 1em;
-    height: 1em;
-    margin-bottom: 25px;
+input[type="radio"] {
+	appearance: none;
+	width: 15px;
+	height: 15px;
+	border: 2px solid var(--black-coffee);
+	border-radius: 50%;
+	background-clip: content-box;
+	padding: 2px;
+    margin-top: 5px;
+}
+input[type="radio"]:checked {
+	background-color: var(--black-coffee);
+}
+label{
+    margin-right: 10px;
 }
 button {
     margin-top: 30px;
     margin-bottom: 5vh;
     padding: 10px;
     width: 20%;
-    font-size: 18px;
     border-radius: 6px;
     border: none;
+    background-color: #fcfbf9;
+    color: var(--black-coffee);
+    font-size: 1em;
+    font-weight: 400;
 }
 #send:hover{
-    background: linear-gradient(140deg, rgb(252, 219, 153), #e8e4d6ec); 
+    background: linear-gradient(140deg, #d19469cb, #e8e4d6); 
+    color: #fcfbf9;
     cursor: pointer;
 }
 #dev-info{
@@ -109,8 +120,8 @@ button {
     text-align: center;
 }
 #dev-info p, a{
-    font-size: 10px;
-    color: #e8e4d6ec;
+    font-size: 12px;
+    color: #d1946969;
 }
 #dev-info a{
     text-decoration: none;  
@@ -143,9 +154,6 @@ button {
         border-radius: 20px;
         margin-top: 15vh;
         font-size: 1em;
-    }
-    .hero img{
-        width: 30vh;
     }
     .container{
         transform: rotateY(40%);
