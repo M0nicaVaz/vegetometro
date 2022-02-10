@@ -1,10 +1,7 @@
 :root {
     --forest-green: #04431aff;
     --black-coffee: #35292dff;
-    --fire-red: #cb242fff;
-    --yellow-red: #ffc758ff;
     --tan-crayola: #d19569ff;   
-
     --titles: 'Festive', cursive;
     --labels:  'Redressed', cursive;
     --small-info:'Lato', sans-serif;
@@ -16,7 +13,7 @@
 body {
     overflow: hidden;
     background: url('/assets/BG.png');
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 .hero-container {
@@ -37,7 +34,7 @@ h1{
 .container {
     text-align: center;
     min-height: 100vh;
-    background-color: #f7f3e8;
+    background-color: #fceddf;
     width: 35%;
     padding: 20px;
     display: block;
@@ -98,7 +95,7 @@ input[type="radio"]:checked {
 label{
     margin-right: 10px;
 }
-button {
+#send {
     margin-top: 30px;
     margin-bottom: 5vh;
     padding: 10px;
@@ -116,8 +113,8 @@ button {
     cursor: pointer;
 }
 #dev-info{
-
     text-align: center;
+    transform: translateY(90vh);
 }
 #dev-info p, a{
     font-size: 12px;
@@ -129,42 +126,141 @@ button {
 .display-none{
     display: none;
 }
+.display-block{
+    display: block;
+}
+#div-result ul{
+    text-align: center;
+    list-style: none;
+    font-family: var(--small-info);
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--tan-crayola);
+}
+#div-result li{
+    margin: auto;
+    width: 60%;
+    background-color: #fcfbf9;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+#div-result button{
+    position: relative;
+    margin: auto;
+    background: inherit;
+    border-radius: 15px;
+    margin-top: 2vh;
+    font-size: 1em;
+    border: solid 1px var(--black-coffee);
+    color: var(--black-coffee);
+    font-weight: 600;
+    padding: 10px;    
+    width: 10%;
+}
+#div-result button:hover{
+   background-color: var(--black-coffee);
+    cursor: pointer;   
+    color: #fcfbf9;
+}
+
+@media (max-width:1280px) {
+    body{
+        /* overflow: hidden; */
+        background: url('/assets/BG-MOBILE.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+     h1{
+        font-size: 8em;
+    }
+    h2{
+        margin-top: 3vh;
+        font-size: 1.3em;
+    }
+    .container{
+        padding: 0;
+    }
+    p, label {
+        font-size: 1.1em;
+    }
+    #send{
+        width: max-content;
+    }
+}
 @media (max-width:1000px) {
     *{
         margin: 0;
         padding: 0;
     }
-    body{
-       overflow: auto;
+    body {
+       background: url('/assets/BG-MOBILE.png');
+       background-size: 100vh;
+       background-repeat: no-repeat;
     }
-    h1{
-        font-size: 5em;
-        transform: rotate(0);
+    h1 {
+        font-size: 10em;
+        transform: rotate(0);  
     }
-    .hero-container{
-        position: relative;
-        width: 100%;
-        height: 100vh;
-    }
-    .hero-container button{
-        position: relative;
-        margin: auto;
-        width: 20%;
-        background: inherit;
-        border-radius: 20px;
-        margin-top: 15vh;
-        font-size: 1em;
-    }
-    .container{
-        transform: rotateY(40%);
+    .hero-container {
         position: relative;
         width: 100vw;
+        margin: auto;
+        height: 100vh;
+    }
+    .hero-container button {
+        position: relative;
+        margin: auto;
+        background: inherit;
+        border-radius: 15px;
+        margin-top: 5vh;
+        font-size: 2em;
+        color: #fcfbf9;
+        font-weight: 600;
+        padding: 25px;    
+        margin-bottom: 0;
+    }
+    .container{
+        margin-top: 0;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        font-size: 2em;
     } 
-    label{
+    h2 {
+        font-size: 2.5em;
+    }
+    .container p{
+        margin-top: 3vh;
+        color: var(--tan-crayola);
+    }
+    label {
         width: 100%;
         font-size: 1em;
     }
-    .display-none{
-        display: none;
+    .fa-solid {
+        font-size: 2em;
+    }
+    input[type='number'] {
+        padding: 20px;
+    }
+    input[type='number']::placeholder {
+        font-size: 26px;
+    }
+    #send{
+        padding: 25px;
+        margin-top: 5vh;
+        margin-bottom: 0;
+    }
+    input[type="radio"] {
+        width: 30px;
+        height: 30px;
+        padding: 4px;
+    }
+    label {
+       font-size: 1.3em;
+    }
+    #dev-info a, p {
+        color: #f8dec6;
     }
 }

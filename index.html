@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <meta httlabel-equiv="X-UA-Comlabelatible" content="IE=edge" />
     <meta name="viewlabelort" content="width=device-width, initial-scale=1.0" />
+    
     <title>Vegetômetro</title>
-    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="labelreconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,37 +15,67 @@
       href="https://fonts.googleapis.com/css2?family=Festive&family=Lato:wght@100;300;700;900&family=Redressed&display=swap"
       rel="stylesheet"
     />
+
+<script src="https://kit.fontawesome.com/9998463f15.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
     <div class="hero-container">
       <h1>Vegetômetro</h1>
-      <button class="display-none">></button>
+      <button class="display-none">
+        <i class="fas fa-chevron-right"></i>
+      </button>
     </div>
 
     <div class="container">
       <form>
-      <h2>A conta certa para o seu <br> churrasco vegetariano!</h2>
-      <div class="div-inputs">
-        <p for="adults">quantidade de adultos:</p>
-        <input type="number" name="adults" id="adults" />
-        <p for="adults">quantidade de crianças:</p>
-        <input type="number" name="children" id="children" />
-        <p for="adults">duração do churrasco:</p>
-        <input type="number" name="hours" id="duration" placeholder="EM HORAS" />
-        <p>incluir bebida alcoólica:</p>
-        <input type="radio" name="alchool" id="alchool">
-        <label for="alchool">sim</label>
-        <input type="radio" name="alchool" id="alchoolFree">
-        <label for="alchoolFree">não</label>
-      </div>
-      <button type="submit" id="send">CALCULAR</button>
-      <span id="dev-info">
-        <p>dev <a href="">monica vaz</a></p>
-        <p><a href="https://www.freepik.com/photos/food">Food photo created by Racool_studio - www.freepik.com</a></p>
-      </span>
-    </form>
-    </div>
+        <h2>
+          A conta certa para o seu <br />
+          churrasco vegetariano!
+        </h2>
     
+        <div class="div-inputs">
+          <p for="adults">quantidade de adultos:</p>
+          <input type="number" name="adults" id="adults" />
+          <p for="adults">quantidade de crianças:</p>
+          <input type="number" name="children" id="children" />
+          <p for="adults">duração do churrasco:</p>
+          <input
+            type="number"
+            name="hours"
+            id="duration"
+            placeholder="EM HORAS"
+          />
+          <p>incluir bebida alcoólica:</p>
+          <input type="radio" name="alchool" id="alchool" />
+          <label for="alchool">sim</label>
+          <input type="radio" name="alchool" id="alchoolFree" />
+          <label for="alchoolFree">não</label>
+  
+        </div>
+        <button type="submit" id="send">CALCULAR</button>
+      </form>
+      
+    </div>
+    <div id="div-result" class="container display-none">
+      <h2>Nós recomendamos:</h2>
+      <ul class="display-block">
+        <li>2kg de queijo coalho</li>
+        <li>200g de pão de alho</li>
+      </ul>
+
+      <button id="'goBack">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+    </div>
+
+    <div id="dev-info">
+      <p> <a href="github.com/m0nicavaz"> dev monica vaz</a></p>
+        <a href="https://www.freepik.com/photos/food"
+        >Food photo created by Racool_studio <br>
+         - www.freepik.com</a
+        >
+    </div>
+
   </body>
 </html>
