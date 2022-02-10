@@ -49,18 +49,18 @@ h1 span{
     margin-left: 0;
 }
 h2{
-    margin-top: 15vh;
+    margin-top: 10vh;
     margin-bottom: 40px;
     font-family: var(--labels);
     color: #e8e4d6ec;
-    font-size: 2em;
+    font-size: 2.2em;
 }
 .div-inputs {
     width: 100%;
     text-align: center;
     margin: auto;
 }
-p {
+p, label {
     color: var(--tan-crayola);
     font-family: var(--small-info);
     font-variant: small-caps;
@@ -68,17 +68,55 @@ p {
     font-size: 20px;
 }
 input[type='number'] {
+    text-align: center;
     margin-bottom: 25px;
     margin-top: 8px;
     border-radius: 6px;
-    padding: 10px;
+    padding: 8px;
+    background-color: #e9e6dd;
+    color: var(--forest-green);
+    font-size: 1.5em;
+    font-weight: 600;
+    width: 60%;
+}
+input[type='number']::placeholder{
+    font-family: var(--small-info);
+    font-size: 16px;
+    color:rgba(209, 148, 105, 0.411);
+    font-family: var(--small-info);
+}
+input[type='radio'] {
+    font: inherit;
+    width: 1em;
+    height: 1em;
+    margin-bottom: 25px;
 }
 button {
-    margin-top: 15px;
+    margin-top: 30px;
+    margin-bottom: 5vh;
     padding: 10px;
     width: 20%;
     font-size: 18px;
     border-radius: 6px;
+    border: none;
+}
+#send:hover{
+    background: linear-gradient(140deg, rgb(252, 219, 153), #e8e4d6ec); 
+    cursor: pointer;
+}
+#dev-info{
+
+    text-align: center;
+}
+#dev-info p, a{
+    font-size: 10px;
+    color: #e8e4d6ec;
+}
+#dev-info a{
+    text-decoration: none;  
+}
+.display-none{
+    display: none;
 }
 @media (max-width:1000px) {
     *{

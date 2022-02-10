@@ -20,20 +20,33 @@
       <div class="hero">
         <img src="/assets/garlic-gcf0b598cd_1280.png" alt="" />
       </div>
-      <button>></button>
+      <button class="display-none">></button>
     </div>
 
     <div class="container">
+      <form>
       <h2>A conta certa para o seu <br> churrasco vegetariano!</h2>
       <div class="div-inputs">
-        <p for="adults">Quantidade de adultos:</p>
+        <p for="adults">quantidade de adultos:</p>
         <input type="number" name="adults" id="adults" />
-        <p for="adults">Quantidade de crianças:</p>
+        <p for="adults">quantidade de crianças:</p>
         <input type="number" name="children" id="children" />
-        <p for="adults">Duração do churrasco:</p>
-        <input type="number" name="hours" id="duration" />
+        <p for="adults">duração do churrasco:</p>
+        <input type="number" name="hours" id="duration" placeholder="EM HORAS" />
+        <br>
+        <input type="radio" name="alchool" id="alchool">
+        <label for="alchool">com bebida alcoólica</label>
+        <br>
+        <input type="radio" name="alchool" id="alchoolFree">
+        <label for="alchoolFree">sem bebida alcoólica</label>
       </div>
-      <button type="submit">Calcular</button>
+      <button type="submit" id="send">Calcular</button>
+      <span id="dev-info">
+        <p>dev <a href="">monica vaz</a></p>
+        <p><a href="https://www.freepik.com/photos/food">Food photo created by Racool_studio - www.freepik.com</a></p>
+      </span>
+    </form>
     </div>
+    
   </body>
 </html>
