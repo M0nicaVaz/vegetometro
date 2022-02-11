@@ -96,6 +96,7 @@ submitBtn.addEventListener("click", (e) => {
     mainTitle.insertAdjacentElement("beforeend", warning);
     setTimeout(() => warning.remove(), 1500);
   }
+  document.querySelector('#dev-info').classList.add('display-none');
 });
 
 backBtn.addEventListener("click", () => {
@@ -109,6 +110,7 @@ backBtn.addEventListener("click", () => {
 
 document.querySelector("#suggestions-span").addEventListener("click", () => {
   document.querySelector(".suggestions").classList.toggle("display-none");
+  document.querySelector('#recommend').style.marginTop = '5vh';
 });
 
 // mobile only
