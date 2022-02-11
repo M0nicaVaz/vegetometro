@@ -12,7 +12,7 @@
 }
 body {
     overflow: hidden;
-    background: url('./assets/BG.png');
+    background: url('../assets/BG.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -244,6 +244,7 @@ label{
         height: 100vh;
     }
     .hero-container button {
+        width: 20%;
         position: relative;
         margin: auto;
         background: inherit;
@@ -252,7 +253,7 @@ label{
         font-size: 2em;
         color: #fcfbf9;
         font-weight: 600;
-        padding: 25px;    
+        padding: 30px;    
         margin-bottom: 0;
     }
     .container{
@@ -302,8 +303,15 @@ label{
         padding: 20px;
         margin-bottom: 20px;
     }
+    #goBack{
+        padding: 30px;    
+        width: 20%;
+    }
     .small{
-        font-size: 20px;
+        color: var(--black-coffee);
+        font-variant: small-caps;
+        font-weight: 600;
+        font-size: 18px;
     }
    
 }
