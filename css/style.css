@@ -267,8 +267,12 @@ label{
         font-size: 2.5em;
     }
     .container p{
+        font-size: 1.5em;
         margin-top: 3vh;
         color: var(--tan-crayola);
+    }
+    #div-result p{
+        font-size: 20px;
     }
     label {
         width: 100%;
