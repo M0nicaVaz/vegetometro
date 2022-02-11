@@ -17,7 +17,7 @@ function bbqCalc() {
     var qtyCorn = totalGuests * 1;
     var qtyCheese = totalGuests * 60;
     var qtySoda = totalGuests * 1;
-    var qtyAlchool = adults.value * 1.2;
+    var qtyAlchool = (adults.value * 1.2).toFixed(1);
   } else {
     qtyGarlic = totalGuests * 3;
     qtyVeggies = totalGuests * 3;
@@ -25,7 +25,7 @@ function bbqCalc() {
     qtyCorn = totalGuests * 2;
     qtyCheese = totalGuests * 90;
     qtySoda = totalGuests * 1.5;
-    qtyAlchool = adults.value * 2;
+    qtyAlchool = (adults.value * 2).toFixed(1);
   }
 
   let garlicLi = document.createElement("li");
@@ -110,3 +110,18 @@ backBtn.addEventListener("click", () => {
 document.querySelector("#suggestions-span").addEventListener("click", () => {
   document.querySelector(".suggestions").classList.toggle("display-none");
 });
+
+// mobile only
+let mobileBtn = document.querySelector('#mobileBtn');
+
+window.addEventListener("load", () =>{
+  if (window.matchMedia("(max-width: 1000px)").matches) {
+   mobileBtn.classList.toggle('display-none');
+  }
+})
+
+mobileBtn.addEventListener("click", () => {
+  document.querySelector('.hero-container').style.display = 'none';
+});
+
+

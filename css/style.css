@@ -148,6 +148,7 @@ label{
     color: var(--tan-crayola);
 }
 #div-result li{
+    text-align: center;
     margin: auto;
     width: 60%;
     background-color: #fcfbf9;
@@ -227,7 +228,7 @@ label{
         padding: 0;
     }
     body {
-        overflow: auto;
+        overflow: hidden;
        background: url('/assets/BG-MOBILE.png');
        background-size: 100vh;
        background-repeat: no-repeat;
