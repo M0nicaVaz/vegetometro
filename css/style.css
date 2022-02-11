@@ -12,7 +12,7 @@
 }
 body {
     overflow: hidden;
-    background: url('/assets/BG.png');
+    background: url('./assets/BG.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
