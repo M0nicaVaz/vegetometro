@@ -123,18 +123,28 @@ label{
 #dev-info a{
     text-decoration: none;  
 }
+.warning{
+    display: block;
+    width: max-content;
+    margin: auto;
+    margin-top: 15px;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    background-color: var(--tan-crayola);
+    padding: 5px;
+    border-radius: 6px;
+    font-family: var(--small-info);
+    font-weight: 600;
+    text-transform: uppercase;
+}
 .display-none{
     display: none;
-}
-.display-block{
-    display: block;
 }
 #div-result ul{
     text-align: center;
     list-style: none;
     font-family: var(--small-info);
     font-weight: 600;
-    text-transform: uppercase;
     color: var(--tan-crayola);
 }
 #div-result li{
@@ -144,6 +154,29 @@ label{
     padding: 10px;
     border-radius: 6px;
     margin-bottom: 10px;
+}
+#suggestions-span{
+    display:block;
+    font-variant: small-caps;
+    font-family: var(--small-info);
+    color: rgb(102, 13, 13);
+    font-weight: 600;
+}
+#suggestions-span:hover{  
+    color: var(--tan-crayola);
+    cursor: pointer;
+}
+.suggestions{
+    text-transform: uppercase;
+    margin: auto;
+    width: 70%;
+}
+.small{
+    color: var(--black-coffee);
+    font-variant: small-caps;
+    font-weight: 600;
+    font-size: 12px;
+    margin-top: 10px;
 }
 #div-result button{
     position: relative;
@@ -194,6 +227,7 @@ label{
         padding: 0;
     }
     body {
+        overflow: auto;
        background: url('/assets/BG-MOBILE.png');
        background-size: 100vh;
        background-repeat: no-repeat;
@@ -263,4 +297,12 @@ label{
     #dev-info a, p {
         color: #f8dec6;
     }
+    #div-result li{
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    .small{
+        font-size: 20px;
+    }
+   
 }

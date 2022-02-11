@@ -30,9 +30,9 @@
       </button>
     </div>
 
-    <div id="mainDiv" class="container display-none">
+    <div id="mainDiv" class="container">
       <form>
-        <h2>
+        <h2 id="mainTitle">
           A conta certa para o seu <br />
           churrasco vegetariano!
         </h2>
@@ -53,10 +53,28 @@
         <button type="submit" id="send">CALCULAR</button>
       </form>
     </div>
-    
-    <div id="div-result" class="container">
+
+    <div id="div-result" class="container display-none">
       <h2>Nós recomendamos:</h2>
       <ul id="resultList" class="display-block"></ul>
+
+      <span id="suggestions-span">
+        <i class="far fa-hand-point-right"></i>
+        leia nossas sugestões
+      </span>
+
+      <div class="suggestions display-none">
+        <p class="small">
+          - para o espetinho de legumes você pode usar tomate, berinjela,
+          abobrinha, batata, cebola e pimentão
+        </p>
+        <p class="small">
+          - o queijo coalho pode ser substituído por tofu defumado
+        </p>
+        <p class="small">
+          - o refrigerante pode ser substituído por suco ou água
+        </p>
+      </div>
 
       <button id="goBack">
         <i class="fas fa-chevron-left"></i>
