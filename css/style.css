@@ -105,7 +105,8 @@ label{
     background-color: #fcfbf9;
     color: var(--black-coffee);
     font-size: 1em;
-    font-weight: 400;
+    font-family: var(--small-info);
+    font-weight: 600;
 }
 #send:hover{
     background: linear-gradient(140deg, #d19469cb, #e8e4d6); 
