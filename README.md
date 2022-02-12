@@ -1,5 +1,5 @@
 # Vegetômetro
-**Minha versão do "Churrascometro" do curso *ProgramadorBr*.** <br>
+**Minha versão do "Churrascometro", projeto sugerido no curso *ProgramadorBr*.** <br>
  Aplicação criada para calcular a quantidade de comida e bebidas para um churrasco vegetariano, levando em consideração a quantidade de adultos, crianças e duração do evento. O design e código foram criados antes de ver a solução oferecida pelo curso. 
  
  ## Versão Desktop
