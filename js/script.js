@@ -1,5 +1,5 @@
 let submitBtn = document.querySelector("#send");
-let backBtn = document.querySelector("#goback");
+let backBtn = document.querySelector("#goBack");
 let divResult = document.querySelector("#div-result");
 let mainDiv = document.querySelector("#mainDiv");
 let adults = document.querySelector("#adults");
@@ -125,5 +125,3 @@ window.addEventListener("load", () =>{
 mobileBtn.addEventListener("click", () => {
   document.querySelector('.hero-container').style.display = 'none';
 });
-
-
