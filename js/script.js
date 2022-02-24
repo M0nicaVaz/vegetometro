@@ -1,11 +1,11 @@
-let submitBtn = document.querySelector("#send");
-let backBtn = document.querySelector("#goBack");
-let divResult = document.querySelector("#div-result");
-let mainDiv = document.querySelector("#mainDiv");
-let adults = document.querySelector("#adults");
-let children = document.querySelector("#children");
-let hours = document.querySelector("#hours");
-let resultList = document.querySelector("#resultList");
+let submitBtn = document.querySelector('#send');
+let backBtn = document.querySelector('#goBack');
+let divResult = document.querySelector('#div-result');
+let mainDiv = document.querySelector('#mainDiv');
+let adults = document.querySelector('#adults');
+let children = document.querySelector('#children');
+let hours = document.querySelector('#hours');
+let resultList = document.querySelector('#resultList');
 
 function bbqCalc() {
   let totalGuests = Number(adults.value) + Number(children.value * 0.5);
@@ -28,100 +28,92 @@ function bbqCalc() {
     qtyAlchool = (adults.value * 2).toFixed(1);
   }
 
-  let garlicLi = document.createElement("li");
+  let garlicLi = document.createElement('li');
   resultList.appendChild(garlicLi);
-  let garlicLiLiTxt = document.createTextNode(
-    "🥖 " + qtyGarlic + " PÃES DE ALHO"
-  );
+  let garlicLiLiTxt = document.createTextNode(`🥖 ${qtyGarlic} PÃES DE ALHO`);
   garlicLi.appendChild(garlicLiLiTxt);
 
-  let veggiesLi = document.createElement("li");
+  let veggiesLi = document.createElement('li');
   resultList.appendChild(veggiesLi);
   let veggiesLiTxt = document.createTextNode(
-    "🍅 " + qtyVeggies + " ESPETINHOS DE LEGUMES*"
+    '🍅 ' + qtyVeggies + ' ESPETINHOS DE LEGUMES*'
   );
   veggiesLi.appendChild(veggiesLiTxt);
 
-  let shroomLi = document.createElement("li");
+  let shroomLi = document.createElement('li');
   resultList.appendChild(shroomLi);
-  let shroomLiTxt = document.createTextNode("🍄 " + qtyShroom + "g DE SHITAKE");
+  let shroomLiTxt = document.createTextNode(`🍄 ${qtyShroom}g DE SHITAKE`);
   shroomLi.appendChild(shroomLiTxt);
 
-  let cornLi = document.createElement("li");
+  let cornLi = document.createElement('li');
   resultList.appendChild(cornLi);
-  let cornLiTxt = document.createTextNode(
-    "🌽 " + qtyCorn + " ESPIGAS DE MILHO"
-  );
+  let cornLiTxt = document.createTextNode(`🌽 ${qtyCorn} ESPIGAS DE MILHO `);
   cornLi.appendChild(cornLiTxt);
 
-  let cheeseLi = document.createElement("li");
+  let cheeseLi = document.createElement('li');
   resultList.appendChild(cheeseLi);
   let cheeseLiTxt = document.createTextNode(
-    "🧀 " + qtyCheese + "g DE QUEIJO COALHO"
+    `🧀 ${qtyCheese}g DE QUEIJO COALHO`
   );
   cheeseLi.appendChild(cheeseLiTxt);
 
-  let sodaLi = document.createElement("li");
+  let sodaLi = document.createElement('li');
   resultList.appendChild(sodaLi);
-  let sodaLiTxt = document.createTextNode(
-    "🥤 " + qtySoda + "L DE REFRIGERANTE"
-  );
+  let sodaLiTxt = document.createTextNode(`🥤 ${qtySoda}L DE REFRIGERANTE`);
   sodaLi.appendChild(sodaLiTxt);
 
-  let alchoolY = document.querySelector("#alchoolY");
+  let alchoolY = document.querySelector('#alchoolY');
   if (alchoolY.checked) {
-    let alchoolLi = document.createElement("li");
+    let alchoolLi = document.createElement('li');
     resultList.appendChild(alchoolLi);
-    let alchoolLiTxt = document.createTextNode(
-      "🍺 " + qtyAlchool + "L DE CERVEJA"
-    );
+    let alchoolLiTxt = document.createTextNode(`🍺 ${qtyAlchool}L DE CERVEJA`);
     alchoolLi.appendChild(alchoolLiTxt);
   }
 }
 
-submitBtn.addEventListener("click", (e) => {
+submitBtn.addEventListener('click', (e) => {
   e.preventDefault();
   if (adults.value && hours.value && children.value) {
-    divResult.classList.remove("display-none");
-    mainDiv.classList.add("display-none");
+    divResult.classList.remove('display-none');
+    mainDiv.classList.add('display-none');
     bbqCalc();
   } else {
-    let mainTitle = document.querySelector("#mainTitle");
-    let warning = document.createElement("span");
+    let mainTitle = document.querySelector('#mainTitle');
+    let warning = document.createElement('span');
     let warningTxt = document.createTextNode(
-      "Por favor, preencha todos os campos!"
+      'Por favor, preencha todos os campos!'
     );
     warning.appendChild(warningTxt);
-    warning.classList.add("warning");
-    mainTitle.insertAdjacentElement("beforeend", warning);
+    warning.classList.add('warning');
+    mainTitle.insertAdjacentElement('beforeend', warning);
     setTimeout(() => warning.remove(), 1500);
   }
   document.querySelector('#dev-info').classList.add('display-none');
 });
 
-backBtn.addEventListener("click", () => {
-  divResult.classList.add("display-none");
-  mainDiv.classList.remove("display-none");
+backBtn.addEventListener('click', () => {
+  divResult.classList.add('display-none');
+  mainDiv.classList.remove('display-none');
 
   while (resultList.firstChild) {
     resultList.firstChild.remove();
   }
 });
 
-document.querySelector("#suggestions-span").addEventListener("click", () => {
-  document.querySelector(".suggestions").classList.toggle("display-none");
+document.querySelector('#suggestions-span').addEventListener('click', () => {
+  document.querySelector('.suggestions').classList.toggle('display-none');
   document.querySelector('#recommend').style.marginTop = '5vh';
 });
 
 // mobile only
 let mobileBtn = document.querySelector('#mobileBtn');
 
-window.addEventListener("load", () =>{
-  if (window.matchMedia("(max-width: 1000px)").matches) {
-   mobileBtn.classList.toggle('display-none');
+window.addEventListener('load', () => {
+  if (window.matchMedia('(max-width: 1000px)').matches) {
+    mobileBtn.classList.toggle('display-none');
   }
-})
+});
 
-mobileBtn.addEventListener("click", () => {
+mobileBtn.addEventListener('click', () => {
   document.querySelector('.hero-container').style.display = 'none';
 });
